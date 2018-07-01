@@ -1,56 +1,53 @@
 
 <ul class="list">
-    <li class="header">MAIN NAVIGATION</li>
+    <li class="header">Menu</li>
     <li class="active">
-        <a href="index.html">
+        <a href="{!! url('/home') !!}">
             <i class="material-icons">home</i>
             <span>Home</span>
+        </a>
+        <a href="{!! route('transaksi.index') !!}">
+            <i class="material-icons">payment</i>
+            <span>Transaksi Perawatan</span>
         </a>
     </li>
     <li>
         <a href="javascript:void(0);" class="menu-toggle">
-            <i class="material-icons">widgets</i>
-            <span>Dropdown Menu</span>
+            <i class="material-icons">people</i>
+            <span>Pelanggan</span>
         </a>
         <ul class="ml-menu">
             <li>
-                <a href="javascript:void(0);" class="menu-toggle">
-                    <span>Sub Menu 1</span>
+                <a href="{!! route('pelanggan.create') !!}">
+                    <span>Registrasi Pelanggan</span>
                 </a>
-                <ul class="ml-menu">
-                    <li>
-                        <a href="pages/widgets/cards/basic.html">Basic</a>
-                    </li>
-                    <li>
-                        <a href="pages/widgets/cards/colored.html">Colored</a>
-                    </li>
-                    <li>
-                        <a href="pages/widgets/cards/no-header.html">No Header</a>
-                    </li>
-                </ul>
+            </li>
+            <li>
+                <a href="{!! route('pelanggan.index') !!}">
+                    <span>Data Pelanggan</span>
+                </a>
             </li>
             <li>
                 <a href="javascript:void(0);" class="menu-toggle">
-                    <span>Sub Menu 2</span>
+                    <span>Top Up Saldo</span>
                 </a>
-                <ul class="ml-menu">
-                    <li>
-                        <a href="pages/widgets/infobox/infobox-1.html">Infobox-1</a>
-                    </li>
-                    <li>
-                        <a href="pages/widgets/infobox/infobox-2.html">Infobox-2</a>
-                    </li>
-                    <li>
-                        <a href="pages/widgets/infobox/infobox-3.html">Infobox-3</a>
-                    </li>
-                    <li>
-                        <a href="pages/widgets/infobox/infobox-4.html">Infobox-4</a>
-                    </li>
-                    <li>
-                        <a href="pages/widgets/infobox/infobox-5.html">Infobox-5</a>
-                    </li>
-                </ul>
             </li>
         </ul>
     </li>
+    <a href="{!! route('pelanggan.index') !!}">
+            <i class="material-icons">people</i>
+            <span>Data Perawatan</span>
+    </a>
+    <a href="{!! route('pelanggan.index') !!}">
+            <i class="material-icons">people</i>
+            <span>Manajemen Service</span>
+    </a>
+    <a href="{!! route('pelanggan.index') !!}">
+            <i class="material-icons">people</i>
+            <span>Paket</span>
+    </a>
+    <a href="{!! route('user.index') !!}">
+            <i class="material-icons">people</i>
+            <span>Manajemen User</span>
+    </a>
 </ul>

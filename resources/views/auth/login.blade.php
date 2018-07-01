@@ -28,14 +28,14 @@
 <body class="login-page">
     <div class="login-box">
         <div class="logo">
-            <a href="javascript:void(0);">Sistem Informasi</a>
-            <small>Contoh</small>
+            <a href="javascript:void(0);">Salon Muslimah Beauty Care and Spa</a>
+            <small>Sistem Transaksi Cashless</small>
         </div>
         <div class="card">
             <div class="body">
                 <form id="sign_in" method="POST" action="{{ route('login') }}">
                         @csrf
-                    <div class="msg">Sign in to start your session</div>
+                    <div class="msg">Login</div>
                     <div class="input-group">
                         <span class="input-group-addon">
                             <i class="material-icons">person</i>

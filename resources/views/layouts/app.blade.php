@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Welcome To | Bootstrap Based Admin Template - Material Design</title>
+    <title>Sistem Transaksi Salon</title>
     <!-- Favicon-->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->
@@ -23,6 +23,15 @@
 
     <!-- Morris Chart Css-->
     <link href="{{ url('template/plugins/morrisjs/morris.css') }}" rel="stylesheet" />
+
+    <!-- Morris Chart Css-->
+    <link href="{{ url('template/plugins/bootstrap-select/css/bootstrap-select.css') }}" rel="stylesheet" />
+
+    <!-- Custom Css -->
+    <link href="{{ url('template/css/style.css') }}" rel="stylesheet">
+
+     <!-- JQuery DataTable Css -->
+    <link href="{{ url('template/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css') }}" rel="stylesheet">
 
     <!-- Custom Css -->
     <link href="{{ url('template/css/style.css') }}" rel="stylesheet">
@@ -106,12 +115,26 @@
     <!-- Sparkline Chart Plugin Js -->
     <script src="{{ url('template/plugins/jquery-sparkline/jquery.sparkline.js') }}"></script>
 
+    <!-- Jquery DataTable Plugin Js -->
+    <script src="{{ url('template/plugins/jquery-datatable/jquery.dataTables.js') }}"></script>
+    <script src="{{ url('template/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js') }}"></script>
+    <script src="{{ url('template/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ url('template/plugins/jquery-datatable/extensions/export/buttons.flash.min.js') }}"></script>
+    <script src="{{ url('template/plugins/jquery-datatable/extensions/export/jszip.min.js') }}"></script>
+    <script src="{{ url('template/plugins/jquery-datatable/extensions/export/pdfmake.min.js') }}"></script>
+    <script src="{{ url('template/plugins/jquery-datatable/extensions/export/vfs_fonts.js') }}"></script>
+    <script src="{{ url('template/plugins/jquery-datatable/extensions/export/buttons.html5.min.js') }}"></script>
+    <script src="{{ url('template/plugins/jquery-datatable/extensions/export/buttons.print.min.js') }}"></script>
+
     <!-- Custom Js -->
     <script src="{{ url('template/js/admin.js') }}"></script>
-    <script src="{{ url('template/js/pages/index.js') }}"></script>
+    <script src="{{ url('template/js/pages/index.js') }}"></script>    
+    <script src="{{ url('template/js/pages/tables/jquery-datatable.js"></script>') }}"></script>
 
     <!-- Demo Js -->
     <script src="{{ url('template/js/demo.js') }}"></script>
+
+    @yield('script')
 </body>
 
 </html>
