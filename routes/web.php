@@ -17,8 +17,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('/pelanggan', 'PelangganController');
-Route::resource('/transaksi', 'TransaksiController');
-Route::resource('/history_topup', 'HistoryTopupController');
-Route::resource('/user', 'UserController');
+Route::group(['middleware'=>'auth'], function()
+{
+	Route::get('/home', 'HomeController@index')->name('home');
+
+	Route::resource('/pelanggan', 'PelangganController');
+
+	Route::resource('/transaksi', 'TransaksiController');
+
+	Route::resource('/history_topup', 'HistoryTopupController');
+
+	Route::resource('/user', 'UserController');
+	Route::get('/user/activated/{id}/{status}', 'UserController@activated_account');
+});

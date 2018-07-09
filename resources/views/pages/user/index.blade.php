@@ -9,36 +9,47 @@
             	 <ul class="header-dropdown m-r--5"></ul>
             </div>
             <div class="body">  
-                <a href="{!! route('user.create') !!}" class="btn btn-primary">Add</a>
-			<br>
+                <div class="text-right">
+                    <a href="{!! route('user.create') !!}" class="btn btn-primary"><i class="material-icons">add</i><span>New User</span></a>
+                </div>
 			<br>
             <div class="table-responsive">
             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
 				<thead>
 					<tr>
-						<th class="text-center">Nama</th>
+                        <th class="text-center">No</th>
+						<th class="text-center">Name</th>
                     	<th class="text-center">Email</th>
                     	<th class="text-center">Status</th>
-                    	<th class="text-center">Aksi</th>
+                        <th class="text-center">Option</th>
+                    	<th class="text-center">Action</th>
                     </tr>
 				</thead>
 				<tbody>
+                    <?php $no = 1; ?>
 					@foreach($users as $user)
 						<tr>
+                            <td class="text-center" width="1%">{{ $no }}</td>
 							<td class="text-center">{!! $user->name !!}</td>
 							<td class="text-center">{!! $user->email !!}</td>
                             <td class="text-center">
-                                @if($user->status == 1)
-                                    <a href="#" class="btn btn-sm btn-outline-primary">
-                                        Aktif (NonAktifkan)
-                                    </a>
+                                @if($user->status == 0)
+                                    <span>Active </span>
                                 @else
-                                    <a href="#" class="btn btn-sm btn-outline-secondary">
-                                        Nonaktif (Aktifkan)
-                                    </a>
+                                    <span>Non Active </span>
                                  @endif
                                 </td>
-                            <!-- <td class="text-center">{!! $user->aksi !!}</td> -->
+                            <td class="text-center">
+                                @if($user->status == 0)
+                                    <a href="user/activated/{{$user->id}}/1" class="btn btn-sm btn-outline-primary">
+                                        Deactivated
+                                    </a>
+                                @else
+                                    <a href="user/activated/{{$user->id}}/0" class="btn btn-sm btn-outline-secondary">
+                                        Activated
+                                    </a>
+                                 @endif
+                             </td>
 							<td class="text-center">
                                 <a href="{{ route('user.show', [$user->id]) }}" class="btn btn-sm btn-outline-primary">
                                     <i class="material-icons">account_balance_wallet</i>
@@ -51,6 +62,7 @@
                                 </button>                      
                             </td>
 						</tr>
+                        <?php $no++; ?>
 					@endforeach	
 				</tbody>
 			</table>

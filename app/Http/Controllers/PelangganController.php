@@ -11,13 +11,13 @@ class PelangganController extends Controller
     public function index()
     {
     	$pelanggans = Pelanggan::all();
-    	return view('pelanggan.index',compact('pelanggans'));
+    	return view('pages.pelanggan.index',compact('pelanggans'));
     }
 
     public function create()
     {
     	$user = User::pluck('name','id');
-    	return view('pelanggan.create',compact('user'));
+    	return view('pages.pelanggan.create',compact('user'));
     }
 
     public function store(Request $request)

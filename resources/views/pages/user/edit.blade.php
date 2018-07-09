@@ -6,15 +6,15 @@
     </div> -->
     <div class="card">
         <div class="body">
-            {!! Form::open(['route' => 'user.store', 'method' => 'post'] ) !!}
+            {!! Form::model($user, ['route' => ['user.update', $user->id], 'method' => 'put'] ) !!}
             
             <div class="card-header">
-                <i class="fa fa-align-justify"></i> <h4>Tambah User</h4><br>
+                <i class="fa fa-align-justify"></i> <h4>Update User</h4><br>
             </div>
             
             <div class="card-body">
                 
-                @include('user._form')
+                @include('pages.user._form')
                 
             </div>
             

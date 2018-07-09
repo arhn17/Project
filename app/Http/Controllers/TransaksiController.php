@@ -17,7 +17,7 @@ class TransaksiController extends Controller
     {
     	$transaksis = Transaksi::with('user', 'detail_perawatan')->get();
         //dd($transaksis);
-    	return view('transaksi.index',compact('transaksis'));
+    	return view('pages.transaksi.index',compact('transaksis'));
     }
 
     public function create()
@@ -41,7 +41,7 @@ class TransaksiController extends Controller
         $ruangan = Ruangan::pluck('nama_ruang','id');
         $terapis = Therapist::pluck('nama','id');
 
-    	return view('transaksi.create',compact('pelanggan','service','ruangan','terapis'));
+    	return view('pages.transaksi.create',compact('pelanggan','service','ruangan','terapis'));
     }
 
     public function store(Request $request)

@@ -10,7 +10,7 @@ class HistoryTopupController extends Controller
    public function index()
    {
    		$history_topups = HistoryTopup:: all();
-   		return view('HistoryTopup.index', compact('$history_topups'))
+   		return view('pages.HistoryTopup.index', compact('$history_topups'))
    }
 
    public function create()

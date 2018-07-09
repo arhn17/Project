@@ -25,6 +25,9 @@
 </div>
 
 <div class="form-group">
-    <label for="role">Role</label>
-    {{ Form::select('status',config('value.status_user'), null, ['class' => 'form-control'])}}
+    <label for="role">Status</label>
+    <select name="status" class="form-control">
+        <option value="0">Active</option>
+        <option value="1">Non Active</option>
+    </select>
 </div>
