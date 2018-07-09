@@ -31,24 +31,19 @@
                     	<th class="text-center">Pelanggan</th>
                     	<th class="text-center">Kategori</th>
                     	<th class="text-center">Diskon</th>
-                    	<th class="text-center">Service/Paket</th>
-                    	<th class="text-center">Therapist</th>
-                    	<th class="text-center">Ruangan</th>
                     	<th class="text-center">Total</th>
+                        <th class="text-center">Aksi</th>
                     </tr>
 				</thead>
 				<tbody>
+                    <?php $no = 1; ?>
 					@foreach($transaksis as $transaksi)
 						<tr>
+                            <td class="text-center" width="1%">{{ $no }}</td>
 							<td class="text-center">{!! $transaksi->user->name !!}</td>
-							<td class="text-center">{!! $transaksi->pelanggan !!}</td>
 							<td class="text-center">{!! $transaksi->kategori !!}</td>
 							<td class="text-center">{!! $transaksi->diskon !!}</td>
-							<td class="text-center">{!! $transaksi->service/paket !!}</td>
-							<td class="text-center">{!! $transaksi->therapist !!}</td>
-							<td class="text-center">{!! $transaksi->ruangan !!}</td>
 							<td class="text-center">{!! $transaksi->total !!}</td>
-							<td class="text-center">{!! $transaksi->aksi !!}</td>
 
 							<td class="text-center">
                                 <a href="{{ route('transaksi.show', [$transaksi->id]) }}" class="btn btn-sm btn-outline-primary">
@@ -62,6 +57,7 @@
                                 </button>                      
                             </td>
 						</tr>
+                        <?php $no++; ?>
 					@endforeach	
 				</tbody>
 			</table>

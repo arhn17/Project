@@ -8,12 +8,12 @@ class Pelanggan extends Model
 {
 	protected $table = 'pelanggans';
     protected $fillable = [
-        'user_id', 'nama', 'alamat', 'telepon', 'saldo', 'reg_date', 'tanggal_lahir'
+        'id', 'nama', 'alamat', 'telepon', 'saldo', 'reg_date', 'tanggal_lahir'
     ];
     
     public function user()
     {
-        return $this->hasOne('App\User', 'id','user_id');
+        return $this->hasOne('App\User', 'id');
     }
 
     public function history_topup()

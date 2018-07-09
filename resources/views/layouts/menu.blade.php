@@ -8,43 +8,68 @@
         </a>
         <a href="{!! route('transaksi.index') !!}">
             <i class="material-icons">payment</i>
-            <span>Transaksi Perawatan</span>
+            <span>Transaction</span>
         </a>
     </li>
     <li>
         <a href="javascript:void(0);" class="menu-toggle">
             <i class="material-icons">people</i>
-            <span>Pelanggan</span>
+            <span>Coustumer</span>
         </a>
         <ul class="ml-menu">
             <li>
                 <a href="{!! route('pelanggan.create') !!}">
-                    <span>Registrasi Pelanggan</span>
+                    <span>Registration</span>
                 </a>
             </li>
             <li>
                 <a href="{!! route('pelanggan.index') !!}">
-                    <span>Data Pelanggan</span>
+                    <span>Coustumer Data</span>
                 </a>
             </li>
             <li>
-                <a href="javascript:void(0);" class="menu-toggle">
-                    <span>Top Up Saldo</span>
+                <a href="javascript:void(0);">
+                    <span>Top Up</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:void(0);" class="menu-toggle">
+            <i class="material-icons">people</i>
+            <span>Service Management</span>
+        </a>
+        <ul class="ml-menu">
+            <li>
+                <a href="{!! route('pelanggan.create') !!}">
+                    <span>Service</span>
+                </a>
+            </li>
+            <li>
+                <a href="{!! route('pelanggan.index') !!}">
+                    <span>Package</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <span>Discount</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <span>Room</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">
+                    <span>Therapist</span>
                 </a>
             </li>
         </ul>
     </li>
     <a href="{!! route('pelanggan.index') !!}">
             <i class="material-icons">people</i>
-            <span>Data Perawatan</span>
-    </a>
-    <a href="{!! route('pelanggan.index') !!}">
-            <i class="material-icons">people</i>
-            <span>Manajemen Service</span>
-    </a>
-    <a href="{!! route('pelanggan.index') !!}">
-            <i class="material-icons">people</i>
-            <span>Paket</span>
+            <span>Report</span>
     </a>
     <a href="{!! route('user.index') !!}">
             <i class="material-icons">people</i>

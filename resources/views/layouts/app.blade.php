@@ -127,9 +127,8 @@
     <script src="{{ url('template/plugins/jquery-datatable/extensions/export/buttons.print.min.js') }}"></script>
 
     <!-- Custom Js -->
-    <script src="{{ url('template/js/admin.js') }}"></script>
-    <script src="{{ url('template/js/pages/index.js') }}"></script>    
-    <script src="{{ url('template/js/pages/tables/jquery-datatable.js"></script>') }}"></script>
+    <script src="{{ url('template/js/admin.js') }}"></script> 
+    <script src="{{ url('template/js/pages/tables/jquery-datatable.js') }}"></script>
 
     <!-- Demo Js -->
     <script src="{{ url('template/js/demo.js') }}"></script>

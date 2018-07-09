@@ -55,3 +55,6 @@
     </div>
 </div>
 @endsection
+@section('script')
+    <script src="{{ url('template/js/pages/index.js') }}"></script>   
+@endsection

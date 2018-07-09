@@ -15,13 +15,14 @@ class TransaksiController extends Controller
 {
      public function index()
     {
-    	$transaksis = Transaksi::all();
+    	$transaksis = Transaksi::with('user', 'detail_perawatan')->get();
+        //dd($transaksis);
     	return view('transaksi.index',compact('transaksis'));
     }
 
     public function create()
     {
-    	$user = Pelanggan::all();
+    	$user = Pelanggan::with('user')->get();
         $pelanggan = [];
         foreach ($user as $key) {
             $pelanggan[$key->id] = $key->user->name;
@@ -45,13 +46,14 @@ class TransaksiController extends Controller
 
     public function store(Request $request)
     {
+        //dd($request);
     	$transaksi = new Transaksi();
-    	$transaksi->user_id = $request->user_id;
+    	$transaksi->user_id = $request->pelanggan_id;
     	$transaksi->kategori = $request->kategori;
     	$transaksi->diskon = $request->diskon;
-    	$transaksi->service = $request->service;
-    	$transaksi->therapist = $request->therapist;
-    	$transaksi->ruangan = $request->ruangan;
+    	$transaksi->service = $request->service_id;
+    	$transaksi->therapist = $request->therapists_id;
+    	$transaksi->ruangan = $request->ruangan_id;
     	$transaksi->total = $request->total;
     	$transaksi->save();
 
